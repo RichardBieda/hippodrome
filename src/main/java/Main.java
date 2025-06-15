@@ -1,7 +1,7 @@
 import java.util.List;
 import java.util.concurrent.TimeUnit;
 
-public class Main {
+ class Main {
 
     public static void main(String[] args) throws Exception {
         List<Horse> horses = List.of(

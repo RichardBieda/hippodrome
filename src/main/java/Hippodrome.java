@@ -3,12 +3,11 @@ import java.util.Comparator;
 import java.util.List;
 
 import static java.util.Objects.isNull;
-
-public class Hippodrome {
+ class Hippodrome {
 
     private final List<Horse> horses;
 
-    public Hippodrome(List<Horse> horses) {
+     Hippodrome(List<Horse> horses) {
         if (isNull(horses)) {
             throw new IllegalArgumentException("Horses cannot be null.");
         } else if (horses.isEmpty()) {
