@@ -1,0 +1,13 @@
+2025-06-16 01:40:20.919 INFO  Main: Main: application starts
+2025-06-16 01:40:20.920 DEBUG Horse: Horse: created a horse: name = Houdini, speed = 2.4,
+2025-06-16 01:40:20.921 DEBUG Horse: Horse: created a horse: name = Comanche, speed = 2.5,
+2025-06-16 01:40:20.921 DEBUG Horse: Horse: created a horse: name = Ranger, speed = 2.6,
+2025-06-16 01:40:20.921 DEBUG Horse: Horse: created a horse: name = Elvis, speed = 2.7,
+2025-06-16 01:40:20.921 DEBUG Horse: Horse: created a horse: name = Yoda, speed = 2.8,
+2025-06-16 01:40:20.921 DEBUG Horse: Horse: created a horse: name = Pegasus, speed = 2.9,
+2025-06-16 01:40:20.921 DEBUG Horse: Horse: created a horse: name = Shelby, speed = 3.0,
+2025-06-16 01:40:20.922 DEBUG Hippodrome: Hippodrome: created a hippodrome with [7] horses
+2025-06-16 01:40:20.922 INFO  Main: Main: Start of the race. Number of participants: 7
+2025-06-16 01:40:21.548 INFO  Main: Main: End of the race. Winner: Pegasus
+2025-06-16 01:40:21.548 INFO  Main: Main: application successfully closed
+

@@ -1,9 +1,14 @@
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
 
  class Main {
 
+     private final static Logger logger = LoggerFactory.getLogger(Main.class);
+
     public static void main(String[] args) throws Exception {
+        logger.info("Main: application starts");
         List<Horse> horses = List.of(
                 new Horse("Houdini", 2.4),
                 new Horse("Comanche", 2.5),
@@ -15,14 +20,18 @@ import java.util.concurrent.TimeUnit;
         );
         Hippodrome hippodrome = new Hippodrome(horses);
 
+        logger.info("Main: Start of the race. Number of participants: {}", horses.size());
+
         for (int i = 0; i < 100; i++) {
             hippodrome.move();
             watch(hippodrome);
-            TimeUnit.MILLISECONDS.sleep(200);
+            TimeUnit.MILLISECONDS.sleep(5);
         }
 
         String winnerName = hippodrome.getWinner().getName();
         System.out.println("The winner is " + winnerName + "!");
+        logger.info("Main: End of the race. Winner: {}", winnerName);
+        logger.info("Main: application successfully closed\n");
     }
 
     private static void watch(Hippodrome hippodrome) throws Exception {
