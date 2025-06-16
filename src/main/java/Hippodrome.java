@@ -12,14 +12,14 @@ import static java.util.Objects.isNull;
 
      Hippodrome(List<Horse> horses) {
         if (isNull(horses)) {
-            logger.error("Hippodrome: Horses list is null");
+            logger.error("Horses list is null");
             throw new IllegalArgumentException("Horses cannot be null.");
         } else if (horses.isEmpty()) {
-            logger.error("Hippodrome: Horses list is empty");
+            logger.error("Horses list is empty");
             throw new IllegalArgumentException("Horses cannot be empty.");
         }
         this.horses = horses;
-        logger.debug("Hippodrome: created a hippodrome with [{}] horses", horses.size());
+        logger.debug("created a hippodrome with [{}] horses", horses.size());
     }
 
     public List<Horse> getHorses() {

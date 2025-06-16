@@ -13,25 +13,25 @@ import static java.util.Objects.isNull;
 
      Horse(String name, double speed, double distance) {
         if (isNull(name)) {
-            logger.error("Horse: name is null");
+            logger.error("name is null");
             throw new IllegalArgumentException("Name cannot be null.");
         } else if (name.isBlank()) {
-            logger.error("Horse: name is blank");
+            logger.error("name is blank");
             throw new IllegalArgumentException("Name cannot be blank.");
         }
         if (speed < 0) {
-            logger.error("Horse: {}, speed is negative", name);
+            logger.error("{}, speed is negative", name);
             throw new IllegalArgumentException("Speed cannot be negative.");
         }
         if (distance < 0) {
-            logger.error("Horse: {}, distance is negative", name);
+            logger.error("{}, distance is negative", name);
             throw new IllegalArgumentException("Distance cannot be negative.");
         }
 
         this.name = name;
         this.speed = speed;
         this.distance = distance;
-        logger.debug("Horse: created a horse: name = {}, speed = {},", name, speed);
+        logger.debug("created a horse: name = {}, speed = {},", name, speed);
     }
 
     public Horse(String name, double speed) {
