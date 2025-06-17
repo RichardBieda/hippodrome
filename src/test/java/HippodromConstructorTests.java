@@ -7,6 +7,8 @@ import static org.junit.jupiter.api.Assertions.assertThrows;
 
 class HippodromConstructorTests {
 
+    // MENTOR FEEDBACK
+    // Same idea applies here (see Horse class tests for details).
     Hippodrome hippodrome;
 
     @AfterEach
