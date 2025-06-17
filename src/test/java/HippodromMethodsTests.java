@@ -9,6 +9,8 @@ import static org.mockito.Mockito.verify;
 
 class HippodromMethodsTests {
 
+    // MENTOR FEEDBACK
+    // Same here (see other tests for reference)
     Hippodrome hippodrome;
 
     @AfterEach
