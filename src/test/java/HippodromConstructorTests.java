@@ -7,16 +7,10 @@ import static org.junit.jupiter.api.Assertions.assertThrows;
 
 class HippodromConstructorTests {
 
-    Hippodrome hippodrome;
-
-    @AfterEach
-    void reset() {
-        hippodrome = null;
-    }
 
     @Test
     void shouldThrowExceptionIfHorsesIsNull() {
-        IllegalArgumentException exception = assertThrows(IllegalArgumentException.class, () -> hippodrome = new Hippodrome(null));
+        IllegalArgumentException exception = assertThrows(IllegalArgumentException.class, () -> new Hippodrome(null));
         assertEquals("Horses cannot be null.", exception.getMessage());
     }
 

@@ -9,12 +9,6 @@ import static org.mockito.Mockito.verify;
 
 class HippodromMethodsTests {
 
-    Hippodrome hippodrome;
-
-    @AfterEach
-    void reset() {
-        hippodrome = null;
-    }
 
     @Test
     void getHorsesShouldReturnExactListPassedToConstructor() {
@@ -22,7 +16,7 @@ class HippodromMethodsTests {
         for (int i = 0; i < 30; i++) {
             horses.add(new Horse("Horse " + i, i + 0.1));
         }
-        hippodrome = new Hippodrome(horses);
+        Hippodrome hippodrome = new Hippodrome(horses);
         assertEquals(horses, hippodrome.getHorses());
     }
 
@@ -34,7 +28,7 @@ class HippodromMethodsTests {
             horses.add(mockHorse);
         }
 
-        hippodrome = new Hippodrome(horses);
+        Hippodrome hippodrome = new Hippodrome(horses);
         hippodrome.move();
 
         for (Horse horse : horses) {
@@ -47,7 +41,7 @@ class HippodromMethodsTests {
         Horse h1 = new Horse("A", 1, 10);
         Horse h2 = new Horse("B", 1, 20);
         Horse h3 = new Horse("C", 1, 30);
-        hippodrome = new Hippodrome(List.of(h1, h2, h3));
+        Hippodrome hippodrome = new Hippodrome(List.of(h1, h2, h3));
 
         assertEquals(h3, hippodrome.getWinner());
     }
